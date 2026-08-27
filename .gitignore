@@ -1,0 +1,25 @@
+# --- Secrets ---
+ors_key.txt
+
+# --- Raw / private research data (never publish) ---
+*.rda
+*.RData
+OpticianDataSample*
+
+# --- Reference data: download it, don't ship it (see data/reference/SOURCE.md) ---
+data/reference/plz-5stellig.geojson
+
+# --- Derived outputs: rebuilt by run.R; not version-controlled ---
+# Only the small worked-example outputs below are committed (see the un-ignore
+# rules). Everything else in output/ — the per-order T1 table and the caches
+# derived from store locations — stays local.
+output/*
+!output/competition_matrix.csv
+!output/competition_matrix.rds
+!output/diagnostics.md
+
+# --- R / OS session cruft ---
+.Rhistory
+.Rapp.history
+.DS_Store
+.Rproj.user/
